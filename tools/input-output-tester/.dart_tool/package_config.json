@@ -1,0 +1,50 @@
+{
+  "configVersion": 2,
+  "packages": [
+    {
+      "name": "archive",
+      "rootUri": "file:///C:/Users/Enchilada/AppData/Local/Pub/Cache/hosted/pub.dartlang.org/archive-3.3.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "collection",
+      "rootUri": "file:///C:/Users/Enchilada/AppData/Local/Pub/Cache/hosted/pub.dartlang.org/collection-1.16.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "crypto",
+      "rootUri": "file:///C:/Users/Enchilada/AppData/Local/Pub/Cache/hosted/pub.dartlang.org/crypto-3.0.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "lints",
+      "rootUri": "file:///C:/Users/Enchilada/AppData/Local/Pub/Cache/hosted/pub.dartlang.org/lints-1.0.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "path",
+      "rootUri": "file:///C:/Users/Enchilada/AppData/Local/Pub/Cache/hosted/pub.dartlang.org/path-1.8.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "typed_data",
+      "rootUri": "file:///C:/Users/Enchilada/AppData/Local/Pub/Cache/hosted/pub.dartlang.org/typed_data-1.3.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "input_output_tester",
+      "rootUri": "../",
+      "packageUri": "lib/",
+      "languageVersion": "2.16"
+    }
+  ],
+  "generated": "2022-04-25T01:05:29.818355Z",
+  "generator": "pub",
+  "generatorVersion": "2.16.2"
+}
