@@ -1,4 +1,4 @@
-![Coverage](.github/badges/jacoco.svg)
+[![Coverage](.github/badges/jacoco.svg)](https://github.com/BME-MIT-IET/iet-hf-2023-minek/actions/workflows/gradle.yml)
 
 
 
