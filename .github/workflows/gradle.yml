@@ -41,7 +41,6 @@ jobs:
     - name: Commit and push the coverage badges and summary file
       if: ${{ github.event_name != 'pull_request' }}
       run: |
-        cd badges
         if [[ `git status --porcelain .github/badges/*.svg` ]]; then
           git config --global user.name 'github-actions'
           git config --global user.email 'github-actions@users.noreply.github.com'
