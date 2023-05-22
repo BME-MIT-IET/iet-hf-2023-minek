@@ -95,6 +95,12 @@ public class TestMain {
         tests.add(new TestCase("WarehousePlayerFullPickup",(n)->{u.WarehousePlayerFullPickup();}));
         tests.add(new TestCase("WarehousePlayerFullBackpackPickup",(n)->{u.WarehousePlayerFullBackpackPickup();}));
         tests.add(new TestCase("WarehousePlayerNonfullBackpackPickup",(n)->{u.WarehousePlayerNonfullBackpackPickup();}));
+        tests.add(new TestCase("GloveDurabilityTestNonRemove",(n)->{u.GloveDurabilityTestNonRemove();}));
+        tests.add(new TestCase("GloveDurabilityTestRemove",(n)->{u.GloveDurabilityTestRemove();}));
+        tests.add(new TestCase("HitBearVirologistWAxe",(n)->{u.HitBearVirologistWAxe();}));
+        tests.add(new TestCase("VirologistEnterFieldWithBear", (n) -> {u.VirologistEnterFieldWithBear();}));
+        tests.add(new TestCase("ShelterEmptyPickup",(n)->{u.ShelterEmptyPickup();}));
+        tests.add(new TestCase("ShelterPickupWhileNumb",(n)->{u.SkipTurnWhileNumb();}));
 
 
         while (testing) {

@@ -1254,4 +1254,137 @@ public class UnitTest {
     }
 
 
+    /**
+     * Kesztyű még nem kopott el
+     */
+    @Test
+    public void GloveDurabilityTestNonRemove() {
+
+        Field empty = new Empty();
+        Virologist v1 = new Virologist(empty);
+        Virologist v2 = new Virologist(empty);
+
+        v2.AddEquipment(new Glove());
+        v2.EquipEquipment(v2.equipments.get(0));
+
+        Agent a = new Agent(3, new Forget());
+
+        v1.AddAgent(a);
+        v1.ThrowAgent(a, v2);
+        assertEquals(2, v2.equippedEquipments.get(0).GetDurability());
+    }
+
+    /**
+    * Kesztyű elkopott
+    */
+    @Test
+    public void GloveDurabilityTestRemove() {
+        Field empty = new Empty();
+        Virologist v1 = new Virologist(empty);
+        Virologist v2 = new Virologist(empty);
+
+        v1.AddEquipment(new Glove());
+        v2.AddEquipment(new Glove());
+        v1.EquipEquipment(v1.equipments.get(0));
+        v2.EquipEquipment(v2.equipments.get(0));
+
+        Agent a = new Agent(3, new Forget());
+        v1.AddAgent(a);
+        v1.ThrowAgent(a, v2);
+
+        assertEquals(0, v2.equippedEquipments.size());
+        assertEquals(0, v1.equippedEquipments.size());
+    }
+
+    /**
+    * Medve vírussal fertőzött virológus megcsapása baltával.
+    */
+    @Test
+    public void HitBearVirologistWAxe() {
+        GameController.Delete();
+
+        Field empty = new Empty();
+        Field bearlab = new BearLaboratory(null);
+        Virologist bear = new Virologist(empty);
+        Virologist nonbear = new Virologist(empty);
+        Axe axe = new Axe();
+
+        new GameController(new ArrayList<>(Arrays.asList(bear, nonbear)), new ArrayList<>(Arrays.asList(empty, bearlab)), null);
+
+        nonbear.AddEquipment(axe);
+        nonbear.EquipEquipment(axe);
+
+        empty.AddNeighbor(bearlab);
+
+        bear.MoveTo(bearlab);
+        bear.MoveTo(empty);
+        nonbear.equippedEquipments.get(0).UseEquipmentOn(nonbear, bear);
+
+        assertEquals(1, GameController.Single.players.size());
+        assertEquals(0, nonbear.equippedEquipments.size());
+
+    }
+
+    /**
+    * Virológus megfertőzése medve vírussal.
+    */
+    @Test
+    public void VirologistEnterFieldWithBear() {
+        Field emptyStartField = new Empty();
+        Field emptyOtherField = new Empty();
+        Field bearlab = new BearLaboratory(null);
+        emptyStartField.AddNeighbor(emptyOtherField);
+        bearlab.AddNeighbor(emptyStartField);
+
+        Virologist player = new Virologist(emptyStartField);
+        player.MoveTo(bearlab);
+
+        player.MoveTo(emptyStartField);
+        Virologist other1 = new Virologist(emptyOtherField);
+
+        other1.MoveTo(emptyStartField);
+
+
+        assertEquals(1, other1.activeEffects.size());
+        assertEquals(1, player.activeEffects.size());
+    }
+
+    /**
+     * Kör átugrása bénulva
+     */
+    @Test
+    public void SkipTurnWhileNumb() {
+        GameController.Delete();
+        Equipment eq = new Cape();
+        Field shelter = new Shelter(eq);
+        Virologist player = new Virologist(shelter);
+        Virologist otherPlayer = new Virologist(shelter);
+        Agent a = new Agent(3, new Numb());
+
+        new GameController(new ArrayList<>(Arrays.asList(player, otherPlayer)), new ArrayList<>(Arrays.asList(shelter)), null);
+
+        player.AcceptAgent(a, null);
+        GameController.Single.EndTurn();
+
+        assertNotEquals(player, GameController.Single.currentPlayer);
+    }
+
+    /**
+     * Üres óvóhelyről való anyagfelvétel.
+     */
+    @Test
+    public void ShelterEmptyPickup() {
+        Shelter shelter = new Shelter(null);
+        Virologist player = new Virologist(shelter);
+        player.TouchField();
+        try {
+            player.PickUp(player.touchedStorables.get(0));
+        } catch (IndexOutOfBoundsException e) {
+            assertEquals(0, player.materials.size());
+            assertEquals(null, shelter.GetStorable());
+        }
+    }
+
+
+
 }
