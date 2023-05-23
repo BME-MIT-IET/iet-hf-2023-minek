@@ -25,7 +25,7 @@ public class TestMain {
         boolean testing = true;
         Scanner sc = new Scanner(System.in);
         Log.indent = 1;
-        UnitTest u = new UnitTest();
+        szoftlab.main.UnitTest u = new szoftlab.main.UnitTest();
         int testCase = 0;
 
         final ArrayList<TestCase> tests = new ArrayList<>();
@@ -95,6 +95,14 @@ public class TestMain {
         tests.add(new TestCase("WarehousePlayerFullPickup",(n)->{u.WarehousePlayerFullPickup();}));
         tests.add(new TestCase("WarehousePlayerFullBackpackPickup",(n)->{u.WarehousePlayerFullBackpackPickup();}));
         tests.add(new TestCase("WarehousePlayerNonfullBackpackPickup",(n)->{u.WarehousePlayerNonfullBackpackPickup();}));
+        tests.add(new TestCase("ThrowAgentToACapeAndGloveUser",(n)->{u.ThrowAgentToACapeAndGloveUser();}));
+        tests.add(new TestCase("AgeCraftedAgent",(n)->{u.AgeCraftedAgent();}));
+        tests.add(new TestCase("ThrowAgentOnMySelfWhileUsingGlove",(n)->{u.ThrowAgentOnMySelfWhileUsingGlove();}));
+        tests.add(new TestCase("ThrowAgentToNumbCapeGloveVirologist",(n)->{u.ThrowAgentToNumbCapeGloveVirologist();}));
+        tests.add(new TestCase("ThrowAgentOnMySelfWhileUsingGloveandCape",(n)->{u.ThrowAgentOnMySelfWhileUsingGloveandCape();}));
+        tests.add(new TestCase("ThrowAgentToAGloveUserByACapeUser",(n)->{u.ThrowAgentToAGloveUserByACapeUser();}));
+        tests.add(new TestCase("VirologistGetsInfectedWithBearVirus",(n)->{u.VirologistGetsInfectedWithBearVirus();}));
+        tests.add(new TestCase("BearStepsOnFieldWithVirologists",(n)->{u.BearStepsOnFieldWithVirologists();}));
 
 
         while (testing) {
