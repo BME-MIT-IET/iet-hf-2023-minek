@@ -6,7 +6,7 @@ Felejtő ágens készítése zsákban tárolt anyagból.
 
 ## Ellenőrzött funkcionalitás
 
-Új ágens létrehozása, anyag, ágens tárolása virológusnál. A virológus sikeresen létrehozza a bénító ágenst, így a zsákjában lévő anyag mennyisége nullára csökken, a bénító ágenst pedig hozzáadódik a kraftolt ágenseinek listájához
+Új ágens létrehozása, anyag, ágens tárolása virológusnál. A virológus sikeresen létrehozza a bénító ágenst, így a zsákjában lévő anyag mennyisége nullára csökken, a bénító ágens pedig hozzáadódik a kraftolt ágenseinek listájához
 
 ## Teszt
 
@@ -21,4 +21,4 @@ Felejtő ágens készítése zsákban tárolt anyagból.
 
 #### Elvárt kimenet
 
-- Virológus 1.: Nem fertőzött semmilyen vírussal, egy üres mezőn áll. Rendelkezik a felejtő ágens genetikus kódjával, egy ráskával és egy lecraftolt felejtő ágenssel.
+- Virológus 1.: Nem fertőzött semmilyen vírussal, egy üres mezőn áll. Rendelkezik a felejtő ágens genetikus kódjával, egy táskával és egy lecraftolt felejtő ágenssel.

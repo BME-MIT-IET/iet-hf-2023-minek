@@ -13,7 +13,7 @@ Felejtő ágens dobása azonos mezőn tartózkodó virológusra. A virológus r�
 ### Kiinduló állapot
 
 - Virológus 1.: Nem fertőzött semmilyen vírussal, egy üres mezőn áll. Virológus 2.-vel azonos mezőn tartózkodik. Rendelkezik egy már lecraftolt felejtő ágenssel.
-- Virológus 2.: Nem fertőzött semmilyen vírussal, egy üres mezőn áll. Virológus 1.-vel azonos mezőn tartózkodik. Nem rendelkezik semmilyen védőfelszereléssel. Van már megtanult genetikai kódja.
+- Virológus 2.: Nem fertőzött semmilyen vírussal, egy üres mezőn áll. Virológus 1.-gyel azonos mezőn tartózkodik. Nem rendelkezik semmilyen védőfelszereléssel. Van már megtanult genetikai kódja.
 
 ### Teszt menete
 
@@ -24,4 +24,4 @@ Felejtő ágens dobása azonos mezőn tartózkodó virológusra. A virológus r�
 #### Elvárt kimenet
 
 - Virológus 1.: Nem fertőzött semmilyen vírussal, egy üres mezőn áll. Virológus 2.-vel azonos mezőn tartózkodik.
-- Virológus 2.: Fertőzött a felejtő ágennsel vírussal, egy üres mezőn áll. Virológus 1.-vel azonos mezőn tartózkodik. Nem rendelkezik semmilyen védőfelszereléssel. Nem rendelkezik megtanult genetikai kóddal.
+- Virológus 2.: Fertőzött a felejtő ágenssel vírussal, egy üres mezőn áll. Virológus 1.-gyel azonos mezőn tartózkodik. Nem rendelkezik semmilyen védőfelszereléssel. Nem rendelkezik megtanult genetikai kóddal.

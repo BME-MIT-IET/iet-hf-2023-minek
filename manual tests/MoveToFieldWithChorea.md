@@ -19,9 +19,12 @@ A virológus megfertőződik vitustánccal, de továbbra sem tud olyan mezőre l
 
 1. A Virológus 1. bal kattintással kattint a szomszédos mezőre, amely choreával fertőzött.
 2. Itt a legördülő menüből kiválasztja a „Move here” menüpontot, ezzel rálép a szomszédos mezőre.
+következő kör:
+3. A Virológus 1. bal kattintással kattint egy vele szomszédos mezőre.
+4. Itt a legördülő menüből kiválasztja a „Move here” menüpontot, ezzel megpróbálva rálépni.
 Következő kör:
-3. A Virológus 1. bal kattintással kattint egy vele nem szomszédos mezőre.
+5. A Virológus 1. bal kattintással kattint egy vele nem szomszédos mezőre.
 
 #### Elvárt kimenet
 
-- Virológus 1.: choreával vírussal fertőzött, egy a fertőzött mezővel szomszédos mezőn áll. A legördülő menüben a „Move here” menüpont nem jelenik meg.
+- Virológus 1.: chorea vírussal fertőzött, egy a fertőzött mezővel szomszédos mezőn áll, amely bármelyik ilyen mező lehet. A kattintás hatására a nem szomszédos mezőn nem jelenik meg legördülő menü.

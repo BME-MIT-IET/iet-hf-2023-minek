@@ -13,7 +13,7 @@ Lopás működése. Annak tesztelése, hogy a virológus nem képes lopni bénul
 ### Kiinduló állapot
 
 - Virológus 1.: Bénító effekt hatása alatt áll, nincs nála semmilyen felszerelés vagy alapanyag. Virológus 2.-vel azonos mezőn tarózkodik.
-- Virológus 2.: Bénító effekt hatása alatt áll, van nála valamilyen felszerelés vagy alapanyag. Virológus 1.-el azonos mezőn tarózkodik.
+- Virológus 2.: Bénító effekt hatása alatt áll, van nála valamilyen felszerelés vagy alapanyag. Virológus 1.-gyel azonos mezőn tarózkodik.
 
 ### Teszt menete
 
@@ -23,4 +23,4 @@ Lopás működése. Annak tesztelése, hogy a virológus nem képes lopni bénul
 #### Elvárt kimenet
 
 - Virológus 1.: Van nála valamilyen felszerelés vagy alapanyag. Virológus 2.-vel azonos mezőn tarózkodik.
-- Virológus 2.: Nincs nála semmilyen felszerelés vagy alapanyag. Virológus 1.-el azonos mezőn tarózkodik.
+- Virológus 2.: Nincs nála semmilyen felszerelés vagy alapanyag. Virológus 1.-gyel azonos mezőn tarózkodik.

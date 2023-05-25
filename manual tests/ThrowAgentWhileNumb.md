@@ -13,7 +13,7 @@ Bénult virológus ágenst próbál dobni egy másik virológusra.
 ### Kiinduló állapot
 
 - Virológus 1.: Bénult állapotban van, egy üres mezőn áll. Virológus 2.-vel azonos mezőn tartózkodik. Rendelkezik egy már lecraftolt felejtő ágenssel.
-- Virológus 2.: Nem fertőzött semmilyen vírussal, egy üres mezőn áll. Virológus 1.-vel azonos mezőn tartózkodik. Nem rendelkezik semmilyen védőfelszereléssel.
+- Virológus 2.: Nem fertőzött semmilyen vírussal, egy üres mezőn áll. Virológus 1.-gyel azonos mezőn tartózkodik. Nem rendelkezik semmilyen védőfelszereléssel.
 
 ### Teszt menete
 
@@ -24,4 +24,4 @@ Bénult virológus ágenst próbál dobni egy másik virológusra.
 #### Elvárt kimenet
 
 - Virológus 1.: Bénult állapotban van, egy üres mezőn áll. Virológus 2.-vel azonos mezőn tartózkodik. Rendelkezik egy már lecraftolt felejtő ágenssel.
-- Virológus 2.: Nem fertőzött semmilyen vírussal, egy üres mezőn áll. Virológus 1.-vel azonos mezőn tartózkodik. Nem rendelkezik semmilyen védőfelszereléssel.
+- Virológus 2.: Nem fertőzött semmilyen vírussal, egy üres mezőn áll. Virológus 1.-gyel azonos mezőn tartózkodik. Nem rendelkezik semmilyen védőfelszereléssel.

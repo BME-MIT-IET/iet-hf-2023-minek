@@ -13,7 +13,7 @@ Nucleotid tárolása, Nucleotid ellopása. A támadó virológus nem tud nukleot
 ### Kiinduló állapot
 
 - Virológus 1.: Nem fertőzött semmilyen vírussal, egy üres mezőn áll. Virológus 2.-vel azonos mezőn tartózkodik.
-- Virológus 2.: Nem fertőzött semmilyen vírussal, egy üres mezőn áll. Virológus 1.-vel azonos mezőn tartózkodik. Rendelkezik tetszőleges mennyiségű nukleotiddal.
+- Virológus 2.: Nem fertőzött semmilyen vírussal, egy üres mezőn áll. Virológus 1.-gyel azonos mezőn tartózkodik. Rendelkezik tetszőleges mennyiségű nukleotiddal.
 
 ### Teszt menete
 
@@ -24,4 +24,4 @@ Nucleotid tárolása, Nucleotid ellopása. A támadó virológus nem tud nukleot
 
 - A kattintás után megjelenő menüben nem jelenik meg a "Steal" menüpont.
 - Virológus 1.: Nem fertőzött semmilyen vírussal, egy üres mezőn áll. Virológus 2.-vel azonos mezőn tartózkodik.
-- Virológus 2.: Nem fertőzött semmilyen vírussal, egy üres mezőn áll. Virológus 1.-vel azonos mezőn tartózkodik. Rendelkezik tetszőleges mennyiségű nukleotiddal.
+- Virológus 2.: Nem fertőzött semmilyen vírussal, egy üres mezőn áll. Virológus 1.-gyel azonos mezőn tartózkodik. Rendelkezik tetszőleges mennyiségű nukleotiddal.
