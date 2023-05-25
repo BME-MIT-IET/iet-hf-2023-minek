@@ -1253,5 +1253,183 @@ public class UnitTest {
         assertEquals(1, player.equippedEquipments.size());
     }
 
+    /**
+     * A virológuson lévő Védő(Protection) ágens élettartamának csökkentése.
+     */
+    @Test
+    public void AgentGetsOlder_Prot() {
+        Log.println("Agent gets older on virologist - Protection", 0);
+        GameController.Delete();
+        Field current = new Empty();
+        Virologist player = new Virologist(current);
+        Virologist otherPlayer = new Virologist(current);
+        GeneticCode code = new GeneticCode(
+                new ArrayList<Material>(Arrays.asList(new AminoAcid(), new Nucleotid())),
+                new Agent(5, new Protection())
+        );
+        new GameController(new ArrayList<>(Arrays.asList(player, otherPlayer)), new ArrayList<>(Arrays.asList(current)), new ArrayList<>(Arrays.asList(code)));
+        player.AcceptAgent(new Agent(5, new Protection()), otherPlayer);
+        GameController.Single.EndTurn();
+        GameController.Single.EndTurn();
+        assertEquals(2, player.activeEffects.get(0).getTimeRemaining());
+    }
+
+    /**
+     * Virológuson lévő Vitustánc(Chorea) ágens élettartamának csökkentése.
+     */
+    @Test
+    public void AgentGetsOlder_Chor() {
+        Log.println("Agent gets older on virologist - Chorea", 0);
+        GameController.Delete();
+        Field current = new Empty();
+        Virologist player = new Virologist(current);
+        Virologist otherPlayer = new Virologist(current);
+        GeneticCode code = new GeneticCode(
+                new ArrayList<Material>(Arrays.asList(new AminoAcid(), new Nucleotid())),
+                new Agent(5, new Chorea())
+        );
+        new GameController(new ArrayList<>(Arrays.asList(player, otherPlayer)), new ArrayList<>(Arrays.asList(current)), new ArrayList<>(Arrays.asList(code)));
+        player.AcceptAgent(new Agent(5, new Chorea()), otherPlayer);
+        GameController.Single.EndTurn();
+        GameController.Single.EndTurn();
+        assertEquals(2, player.activeEffects.get(0).getTimeRemaining());
+    }
+
+    /**
+     * Virológuson lévő Bénító(Numb) ágens élettartamának csökkentése.
+     */
+    @Test
+    public void AgentGetsOlder_Numb() {
+        Log.println("Agent gets older on virologist - Numb", 0);
+        GameController.Delete();
+        Field current = new Empty();
+        Virologist player = new Virologist(current);
+        Virologist otherPlayer = new Virologist(current);
+        GeneticCode code = new GeneticCode(
+                new ArrayList<Material>(Arrays.asList(new AminoAcid(), new Nucleotid())),
+                new Agent(5, new Numb())
+        );
+        new GameController(new ArrayList<>(Arrays.asList(player, otherPlayer)), new ArrayList<>(Arrays.asList(current)), new ArrayList<>(Arrays.asList(code)));
+        player.AcceptAgent(new Agent(5, new Numb()), otherPlayer);
+        GameController.Single.EndTurn();
+        GameController.Single.EndTurn();
+        ///Itt 1-nek kell lennie, mert dobja a körét a bénult virológus
+        assertEquals(1, player.activeEffects.get(0).getTimeRemaining());
+    }
+
+    /**
+     * Virológuson lévő Felejtő(Forget) ágens élettartamának csökkentése.
+     */
+    @Test
+    public void AgentGetsOlder_Forget() {
+        Log.println("Agent gets older on virologist - Forget", 0);
+        GameController.Delete();
+        Field current = new Empty();
+        Virologist player = new Virologist(current);
+        Virologist otherPlayer = new Virologist(current);
+        GeneticCode code = new GeneticCode(
+                new ArrayList<Material>(Arrays.asList(new AminoAcid(), new Nucleotid())),
+                new Agent(5, new Forget())
+        );
+        new GameController(new ArrayList<>(Arrays.asList(player, otherPlayer)), new ArrayList<>(Arrays.asList(current)), new ArrayList<>(Arrays.asList(code)));
+        player.LearnGenCode(code);
+        player.AcceptAgent(new Agent(1, new Forget()), otherPlayer);
+        GameController.Single.EndTurn();
+        GameController.Single.EndTurn();
+        assertEquals(0, player.activeEffects.size());
+        assertEquals(0, player.knownGeneticCodes.size());
+    }
+
+
+    /**
+     * Már megtanult genetikus kódot megpróbálja a virológus újra megtanulni.
+     */
+    @Test
+    public void LearnAlreadyKnownGeneticCode() {
+        Log.println("Learn already known Genetic code", 0);
+        GameController.Delete();
+        GeneticCode code1 = new GeneticCode(
+                new ArrayList<Material>(Arrays.asList(new AminoAcid(), new Nucleotid())),
+                new Agent(5, new Protection())
+        );
+        GeneticCode code2 = new GeneticCode(
+                new ArrayList<Material>(Arrays.asList(new AminoAcid(), new Nucleotid())),
+                new Agent(5, new Numb())
+        );
+
+        Field labor = new Laboratory(code1);
+        Virologist player = new Virologist(labor);
+        Field labor2 = new Laboratory(code2);
+        labor.AddNeighbor(labor2);
+        new GameController(new ArrayList<>(Arrays.asList(player)), new ArrayList<>(Arrays.asList(labor, labor2)), new ArrayList<>(Arrays.asList(code1, code2)));
+
+        player.TouchField();
+        player.PickUp(player.touchedStorables.get(0));
+        player.MoveTo(labor2);
+        player.MoveTo(labor);
+        player.TouchField();
+        player.PickUp(player.touchedStorables.get(0));
+
+        assertEquals(1, player.knownGeneticCodes.size());
+        assertNotEquals(2, player.knownGeneticCodes.size());
+
+    }
+
+    /**
+     * Köpenyt viselő Virologus támadása
+     */
+    @Test
+    public void ThrowAgentToACapeUser(){
+        Log.println("Throw Agent to a virologist who has a cape", 0);
+        Agent a = new Agent(10, new Chorea());
+        Field current = new Empty();
+        Virologist player = new Virologist(current);
+        Virologist capeUser = new Virologist(current);
+        Cape c = new Cape();
+        capeUser.AddEquipment(c);
+        capeUser.EquipEquipment(c);
+        player.AddAgent(a);
+        player.ThrowAgent(a, capeUser);
+        assertEquals(0, player.craftedAgents.size());
+    }
+    /**
+     * Kesztyűt viselő Virologus támad meg egy Kesztyűt viselő Virologust
+     */
+    @Test
+    public void ThrowAgentByAGloveUserToAGloveUser(){
+        Log.println("Throw Agent to a Glove User Virologist from a Glove User Virologist", 0);
+        Agent a = new Agent(10, new Chorea());
+        Field current = new Empty();
+        Virologist attacker = new Virologist(current);
+        Virologist target = new Virologist(current);
+        Glove attackerGlove = new Glove();
+        Glove targetGlove = new Glove();
+        target.AddEquipment(targetGlove);
+        target.EquipEquipment(targetGlove);
+        attacker.AddEquipment(attackerGlove);
+        attacker.EquipEquipment(attackerGlove);
+        attacker.AddAgent(a);
+        attacker.ThrowAgent(a, target);
+        assertEquals(attacker.equippedEquipments.size(), 0);
+        assertEquals(target.equippedEquipments.size(), 0);
+    }
+
+    /**
+     * Agens magamra kenése mikor köpenyt viselek
+     */
+
+    @Test
+    public void ThrowAgentOnMySelfWhileUsingCape(){
+        Log.println("Throw Agent on myself while using a cape", 0);
+        Agent a = new Agent(10, new Chorea());
+        Field current = new Empty();
+        Virologist capeUser = new Virologist(current);
+        Cape c = new Cape();
+        capeUser.AddEquipment(c);
+        capeUser.EquipEquipment(c);
+        capeUser.AddAgent(a);
+        capeUser.ThrowAgent(a, capeUser);
+        assertEquals(0, capeUser.craftedAgents.size());
+    }
 
 }
