@@ -42,11 +42,11 @@ public class Virologist implements Touchable , Clickable {
     /**
      * Equipments currently on the Virologist.
      */
-    ArrayList<Equipment> equippedEquipments = new ArrayList<>();
+    public ArrayList<Equipment> equippedEquipments = new ArrayList<>();
     /**
      * Stored equipments.
      */
-    ArrayList<Equipment> equipments = new ArrayList<>();
+    public ArrayList<Equipment> equipments = new ArrayList<>();
     /**
      * Stored crafted agents.
      */
