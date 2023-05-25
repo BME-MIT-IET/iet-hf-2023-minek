@@ -1,16 +1,17 @@
-# Teszt:  ThrowForgetAgent
+# Teszt: ThrowAgentWhileNumb
 
 ## Leírás:
-Felejtő ágens dobása egy másik virológusra.
+Bénult virológus ágenst próbál dobni egy másik virológusra.
 
 ## Ellenőrzött funkcionalitás:
-Új ágens létrehozása, ágens eltárolása virológusnál, ágens dobása virológusra.
+Új effekt létrehozása, mező
+létrehozása, effekt hozzáadása virológushoz, ágens dobása, bénító effekt hatásossága.
 
 ## Teszt:
 
 #### Kiinduló állapot:
-- Virológus 1.: egy labor mezőn áll, amely tartalmaz egy forget genetikai kódot. A virológus rendelkezik az ágens elkészítéséhez szükséges aminosavval és nukleotiddal.
-- Virológus 2.: egy mezőn áll Virológus 1.-gyel.
+- Virológus 1.: egy labor mezőn áll, amely tartalmaz egy numb genetikai kódot. A virológus rendelkezik az ágens elkészítéséhez szükséges aminosavval és nukleotiddal. Numb-bsn sebzett.
+- Virológus 2.: Virológus 1.-gyel megegyező mezőn áll.
 
 #### Teszt menete:
 1. A Virológus 1. bal kattintással kattint a labor mezőre
@@ -20,8 +21,8 @@ Felejtő ágens dobása egy másik virológusra.
 5. Virológus 1. a "Craft" menüpontra kattintva kiválasztja a "Numb" ágenst, melyel létrehozza azt.
 6. A Virológus 1. bal egér gombbal kattintva a mezőn előhozza a legördülő mezőt.
 7. A Virológus 1. a menüpontokból kiválasztja a "Throw an agent" pontot.
-8. A Virológus 1. a "Craft" előugró menüpontok közül kiválasztja a már elkészített numb ágenst, ezzel a másik játékosra dobja azt.
+8. A Virológus 1. a "Craft" előugró menüpontok közül kiválasztja a már elkészítéett numb ágenst, ezzel a másik játékosra dobja azt.
 
 #### Elvárt kimenet:
-- Virológus 1.: az elkészített ágenseinek száma csökken
-- Virológus 2.: forget hatása alatt áll
+- Virológus 1.: az elkészített ágenseinek száma nem csökken
+- Virológus 2.: nem került rá a numb ágens hatása

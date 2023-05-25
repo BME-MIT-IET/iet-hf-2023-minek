@@ -1,16 +1,17 @@
-# Teszt:  ThrowForgetAgent
+# Teszt:  ThrowNumbAgentOnProtected
 
 ## Leírás:
-Felejtő ágens dobása egy másik virológusra.
+Bénító ágens dobása védett virológusra.
 
 ## Ellenőrzött funkcionalitás:
-Új ágens létrehozása, ágens eltárolása virológusnál, ágens dobása virológusra.
+Új ágens létrehozása, ágens
+eltárolása virológusnál, ágens dobása másra, ágens kivédése
 
 ## Teszt:
 
 #### Kiinduló állapot:
-- Virológus 1.: egy labor mezőn áll, amely tartalmaz egy forget genetikai kódot. A virológus rendelkezik az ágens elkészítéséhez szükséges aminosavval és nukleotiddal.
-- Virológus 2.: egy mezőn áll Virológus 1.-gyel.
+- Virológus 1.: egy labor mezőn áll, amely tartalmaz egy numb genetikai kódot. A virológus rendelkezik az ágens elkészítéséhez szükséges aminosavval és nukleotiddal.
+- Virológus 2.: egy mezőn áll Virológus 1.-gyel, protection-nel rendelkezik.
 
 #### Teszt menete:
 1. A Virológus 1. bal kattintással kattint a labor mezőre
@@ -24,4 +25,4 @@ Felejtő ágens dobása egy másik virológusra.
 
 #### Elvárt kimenet:
 - Virológus 1.: az elkészített ágenseinek száma csökken
-- Virológus 2.: forget hatása alatt áll
+- Virológus 2.: nem került rá a numb ágens hatása

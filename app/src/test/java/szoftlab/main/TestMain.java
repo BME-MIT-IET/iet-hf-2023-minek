@@ -101,6 +101,14 @@ public class TestMain {
         tests.add(new TestCase("VirologistEnterFieldWithBear", (n) -> {u.VirologistEnterFieldWithBear();}));
         tests.add(new TestCase("ShelterEmptyPickup",(n)->{u.ShelterEmptyPickup();}));
         tests.add(new TestCase("ShelterPickupWhileNumb",(n)->{u.SkipTurnWhileNumb();}));
+        tests.add(new TestCase("ThrowAgentToACapeAndGloveUser",(n)->{u.ThrowAgentToACapeAndGloveUser();}));
+        tests.add(new TestCase("AgeCraftedAgent",(n)->{u.AgeCraftedAgent();}));
+        tests.add(new TestCase("ThrowAgentOnMySelfWhileUsingGlove",(n)->{u.ThrowAgentOnMySelfWhileUsingGlove();}));
+        tests.add(new TestCase("ThrowAgentToNumbCapeGloveVirologist",(n)->{u.ThrowAgentToNumbCapeGloveVirologist();}));
+        tests.add(new TestCase("ThrowAgentOnMySelfWhileUsingGloveandCape",(n)->{u.ThrowAgentOnMySelfWhileUsingGloveandCape();}));
+        tests.add(new TestCase("ThrowAgentToAGloveUserByACapeUser",(n)->{u.ThrowAgentToAGloveUserByACapeUser();}));
+        tests.add(new TestCase("VirologistGetsInfectedWithBearVirus",(n)->{u.VirologistGetsInfectedWithBearVirus();}));
+        tests.add(new TestCase("BearStepsOnFieldWithVirologists",(n)->{u.BearStepsOnFieldWithVirologists();}));
 
 
         while (testing) {

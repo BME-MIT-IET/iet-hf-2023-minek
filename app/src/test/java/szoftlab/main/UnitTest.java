@@ -1253,6 +1253,163 @@ public class UnitTest {
         assertEquals(1, player.equippedEquipments.size());
     }
 
+    /**
+     * Köpenyt és kesztyűt viselő Virologus támadása
+     */
+    @Test
+    public void ThrowAgentToACapeAndGloveUser(){
+        Log.println("Throw Agent to a cape and Glove User ", 0);
+        Agent a = new Agent(10, new Chorea());
+        Field current = new Empty();
+        Virologist attacker = new Virologist(current);
+        Virologist target = new Virologist(current);
+        Glove g = new Glove();
+        Cape c = new Cape();
+        target.AddEquipment(g);
+        target.EquipEquipment(g);
+        target.AddEquipment(c);
+        target.EquipEquipment(c);
+        attacker.AddAgent(a);
+        attacker.ThrowAgent(a, target);
+        assertEquals(2, target.equippedEquipments.size());
+        assertEquals(0, attacker.craftedAgents.size());
+    }
+
+    /**
+     * Elkészített ágens raktárban történő felhasználhatóságának tesztelése.
+     */
+    @Test
+    public void AgeCraftedAgent() {
+        Log.println("Age crafted agent in virologist inventory");
+        GameController.Delete();
+        Field empty = new Empty();
+        Virologist virologist = new Virologist(empty);
+        new GameController(new ArrayList<>(Arrays.asList(virologist)), new ArrayList<>(Arrays.asList(empty)), null);
+        Agent aged_agent = new Agent(1, new Numb());
+
+        virologist.AddAgent(aged_agent);
+        assertEquals(1, virologist.craftedAgents.size());
+        GameController.Single.EndTurn();
+        assertEquals(0, virologist.craftedAgents.size());
+
+    }
+
+
+    /**
+     * Agens magamra kenése mikor köpenyt viselek
+     */
+
+    @Test
+    public void ThrowAgentOnMySelfWhileUsingGlove(){
+        Log.println("Throw Agent on myself while using a glove", 0);
+        Agent a = new Agent(10, new Chorea());
+        Field current = new Empty();
+        Virologist gloveUser = new Virologist(current);
+        Glove g = new Glove();
+        gloveUser.AddEquipment(g);
+        gloveUser.EquipEquipment(g);
+        gloveUser.AddAgent(a);
+        gloveUser.ThrowAgent(a, gloveUser);
+        assertEquals(0,gloveUser.craftedAgents.size());
+        assertEquals(1, gloveUser.equippedEquipments.size());
+    }
+
+    /**
+     * Agens (Vitustánc) rákenése egy bénult, köpenyes és kesztyűs virológusra.
+     */
+    @Test
+    public void ThrowAgentToNumbCapeGloveVirologist() {
+        GameController.Delete();
+        Field empty = new Empty();
+        Virologist target = new Virologist(empty);
+        Virologist attacker = new Virologist(empty);
+        Chorea c = new Chorea();
+        new GameController(new ArrayList<>(Arrays.asList(attacker, target)), new ArrayList<>(Arrays.asList(empty)), null);
+
+        attacker.AddAgent(new Agent(2, c));
+
+        target.PickUp(new Cape());
+        target.PickUp(new Glove());
+
+        target.EquipEquipment(target.equipments.get(0));
+        target.EquipEquipment(target.equipments.get(0));
+
+        assertEquals(2, target.equippedEquipments.size());
+        attacker.ThrowAgent(attacker.craftedAgents.get(0), target);
+        assertEquals(0, attacker.craftedAgents.size());
+
+        if (attacker.activeEffects.size() > 0)
+            assertEquals(c, attacker.activeEffects.get(0));
+
+
+    }
+
+    /**
+     * Agens magamra kenése mikor köpenyt és kesztyűt viselek
+     */
+
+    @Test
+    public void ThrowAgentOnMySelfWhileUsingGloveandCape(){
+        Log.println("Throw Agent on myself while using a glove and cape", 0);
+        Agent a = new Agent(10, new Chorea());
+        Field current = new Empty();
+        Virologist player = new Virologist(current);
+        Glove g = new Glove();
+        Cape c = new Cape();
+        player.AddEquipment(g);
+        player.AddEquipment(c);
+        player.EquipEquipment(g);
+        player.EquipEquipment(c);
+        player.AddAgent(a);
+        player.ThrowAgent(a, player);
+        assertEquals(0,player.craftedAgents.size());
+        assertEquals(2, player.equippedEquipments.size());
+    }
+
+    /**
+     * Agens kenése kesztyűs virológusra míg nekem van köpenyem
+     */
+    @Test
+    public void ThrowAgentToAGloveUserByACapeUser(){
+        Log.println("Throw Agent to a glove user by a cape user ", 0);
+        Agent a = new Agent(10, new Chorea());
+        Field current = new Empty();
+        Virologist attacker = new Virologist(current);
+        Virologist target = new Virologist(current);
+        Glove g = new Glove();
+        Cape c = new Cape();
+        target.AddEquipment(g);
+        target.EquipEquipment(g);
+        attacker.AddEquipment(c);
+        attacker.EquipEquipment(c);
+        attacker.AddAgent(a);
+        attacker.ThrowAgent(a, target);
+        assertEquals(target.equippedEquipments.size(), 1);
+        assertEquals(attacker.equippedEquipments.size(), 1);
+        assertEquals(attacker.craftedAgents.size(), 0);
+    }
+
+    /**
+     * Virologus megfertozodik a medve virussal egy specialis laboratoriumban.
+     */
+    @Test
+    public void VirologistGetsInfectedWithBearVirus() {
+        Log.println("Virologist gets infected with Bear virus");
+        Field emptyStartField = new Empty();
+        GeneticCode code = new GeneticCode(
+                new ArrayList<Material>(Arrays.asList(new AminoAcid(), new Nucleotid())),
+                new Agent(5, new Protection())
+        );
+        Field bearLab = new BearLaboratory(code);
+        emptyStartField.AddNeighbor(bearLab);
+
+        Virologist player = new Virologist(emptyStartField);
+
+        player.MoveTo(bearLab);
+
+        assertEquals(1, player.activeEffects.size());
+
+    }
 
     /**
      * Kesztyű még nem kopott el
@@ -1387,4 +1544,37 @@ public class UnitTest {
 
 
 
+    /**
+     * Virologus megfertoz mas virologusokat a medve virussal egy masik mezon.
+     *
+     */
+    @Test
+    public void BearStepsOnFieldWithVirologists() {
+        Log.println("Bear steps on field with virologists");
+        Field emptyStartField = new Empty();
+        GeneticCode code = new GeneticCode(
+                new ArrayList<Material>(Arrays.asList(new AminoAcid(), new Nucleotid())),
+                new Agent(5, new Protection())
+        );
+        Field bearLab = new BearLaboratory(code);
+        emptyStartField.AddNeighbor(bearLab);
+
+        Virologist player = new Virologist(emptyStartField);
+
+        player.MoveTo(bearLab);
+
+        assertEquals(1, player.activeEffects.size());
+
+        Log.println("Player got the bear virus, resuming test...");
+
+        Virologist other1 = new Virologist(emptyStartField);
+        Virologist other2 = new Virologist(emptyStartField);
+
+        player.MoveTo(emptyStartField);
+
+
+        assertEquals(1, other1.activeEffects.size());
+        assertEquals(1, other2.activeEffects.size());
+        assertEquals(1, player.activeEffects.size());
+    }
 }
