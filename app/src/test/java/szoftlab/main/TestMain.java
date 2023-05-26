@@ -109,7 +109,14 @@ public class TestMain {
         tests.add(new TestCase("ThrowAgentToAGloveUserByACapeUser",(n)->{u.ThrowAgentToAGloveUserByACapeUser();}));
         tests.add(new TestCase("VirologistGetsInfectedWithBearVirus",(n)->{u.VirologistGetsInfectedWithBearVirus();}));
         tests.add(new TestCase("BearStepsOnFieldWithVirologists",(n)->{u.BearStepsOnFieldWithVirologists();}));
-
+        tests.add(new TestCase("AgentGetsOlder_Prot",(n)->{u.AgentGetsOlder_Prot();}));
+        tests.add(new TestCase("AgentGetsOlder_Chor",(n)->{u.AgentGetsOlder_Chor();}));
+        tests.add(new TestCase("AgentGetsOlder_Numb",(n)->{u.AgentGetsOlder_Numb();}));
+        tests.add(new TestCase("AgentGetsOlder_Forget",(n)->{u.AgentGetsOlder_Forget();}));
+        tests.add(new TestCase("LearnAlreadyKnownGeneticCode",(n)->{u.LearnAlreadyKnownGeneticCode();}));
+        tests.add(new TestCase("ThrowAgentToACapeUser",(n)->{u.ThrowAgentToACapeUser();}));
+        tests.add(new TestCase("ThrowAgentByAGloveUserToAGloveUser",(n)->{u.ThrowAgentByAGloveUserToAGloveUser();}));
+        tests.add(new TestCase("ThrowAgentOnMySelfWhileUsingCape",(n)->{u.ThrowAgentOnMySelfWhileUsingCape();}));
 
         while (testing) {
             Log.println("Select a test case:", 0);
