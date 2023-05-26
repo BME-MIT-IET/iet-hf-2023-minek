@@ -4,7 +4,7 @@
 Vitustánc ágens kraftolása elegendő nyersanyaggal.
 
 ## Ellenőrzött funkcionalitás:
-Új ágens létrehozása, anyag, ágens tárolása virológusnál, genetiaki kód tanulás.
+Új ágens létrehozása, anyag, ágens tárolása virológusnál, genetikai kód tanulás.
 
 ## Teszt:
 
@@ -14,8 +14,8 @@ Vitustánc ágens kraftolása elegendő nyersanyaggal.
 #### Teszt menete:
 1. A Virológus 1. bal egér gombbal kattintva a mezőn előhozza a legördülő mezőt.
 2. A Virológus 1. a menüpontokból kiválasztja a "Touch this field" pontot.
-3. A Virológus 1. a menüpontokból kiválasztja a "Interract with field" pontot.
-4. Ezzel megtanulta a vitustánc genetaki kódot.
+3. A Virológus 1. a menüpontokból kiválasztja a "Interact with field" pontot.
+4. Ezzel megtanulta a vitustánc genetikai kódot.
 5. A Virológus 1. bal egér gombbal kattintva a "Craft" mezőn előhozza a legördülő mezőt.
 6. Ebből kiválasztja a vitustáncot.
 
