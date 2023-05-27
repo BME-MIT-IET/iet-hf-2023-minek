@@ -15,7 +15,7 @@ A játék biztonságához az is nagy mértékben hozzájárul, hogy Java nyelven
 ## CodeQL
 
 A biztonsági problémák felderítésére beállítottam a projektre a CodeQL-t, amely GitHub által a biztonsági ellenőrzések automatizálására kifejlesztett kódelemző motor.
-![CodeQL setup](CodeQL.png)
+![CodeQL setup](images/CodeQL.png)
 
 A scanelés eredményeként a tesztelő eszköz nem talált semmilyen sérülékenységet:
-![CodeQL results](CodeQL_results.png)
+![CodeQL results](images/CodeQL_results.png)
