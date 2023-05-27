@@ -9,7 +9,7 @@ Védő ágens kraftolása kevesebb, mint elegendő nyersanyaggal.
 ## Teszt:
 
 #### Kiinduló állapot:
-- Virológus 1.: egy labro mezőn áll, amelyen protection genetikai kód található. Rendelkezik aminosavval és nukleotiddal, ami az ágensek készítéséhez elegendő.
+- Virológus 1.: egy labor mezőn áll, amelyen protection genetikai kód található. Rendelkezik aminosavval és nukleotiddal, ami az ágensek készítéséhez elegendő.
 
 #### Teszt menete:
 1. A Virológus 1. bal egér gombbal kattintva a mezőn előhozza a legördülő mezőt.
@@ -20,4 +20,4 @@ Védő ágens kraftolása kevesebb, mint elegendő nyersanyaggal.
 6. Ebből kiválasztja a protection-t.
 
 #### Elvárt kimenet:
-- Virológus 1.: nem tudta elkészyteni az ágenst, az aminosavjai és nukleotidjai megmaradtak.
+- Virológus 1.: nem tudta elkészíteni az ágenst, az aminosavjai és nukleotidjai megmaradtak.

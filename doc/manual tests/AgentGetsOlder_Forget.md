@@ -16,11 +16,12 @@ hogy ne maradjon a virológuson a végtelenségig a hatásuk.
 #### Teszt menete:
 1. A Virológus 2. bal egér gombbal kattintva a másik játékoson előhozza a legördülő mezőt.
 2. A Virológus 2. a menüpontokból kiválasztja a "Throw affect" pontot.
-3. A Virológus 1. elfelejtette a megtanult genetikai kódokat.
-4. A Virológus 1. bal egér gombbal kattintva a mezőn előhozza a legördülő mezőt.
-5. A Virológus 1. a menüpontokból kiválasztja a "Touch this field" pontot.
-4. A Virológus 1. bal egér gombbal kattintva a mezőn előhozza a legördülő mezőt.
-5. A Virológus 1. a menüpontokból kiválasztja a "Touch this field" pontot.
+3. A Virológus 1. kiválasztja a Craft menüből a Forget ágenst.
+4. A Virológus 1. elfelejtette a megtanult genetikai kódokat.
+5. A Virológus 1. bal egér gombbal kattintva a mezőn előhozza a legördülő mezőt.
+6. A Virológus 1. a menüpontokból kiválasztja a "Touch this field" pontot.
+7. A Virológus 1. bal egér gombbal kattintva a mezőn előhozza a legördülő mezőt.
+8. A Virológus 1. a menüpontokból kiválasztja a "Touch this field" pontot.
 
 #### Elvárt kimenet:
 - Virológus 1.: a körök végére a felejtés hatása elmúlt.
