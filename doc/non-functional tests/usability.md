@@ -3,7 +3,7 @@
 ## Bevezetés
 Egy alkalmazás megítélésében nagy szerepet játszik, hogy azt a felhasználóinak mennyire könnyű
 az elképzelésüknek és elvárásaiknak megfelelően használni. Fontos továbbá, hogy a felhasználói felület
-intuitív legyen, azaz a program használói akár külön előképzettség nélkül (egy játék esetében ez 
+intuitív legyen, azaz a program használói akár külön előképzettség nélkül is (egy játék esetében ez 
 hatványozottan igaz) sikeresen eligazodjon például a menürendszerben és esetünkben a játékmenet során is.
 
 ## Menü
@@ -57,7 +57,7 @@ kattintgatva kis szerencsével rákattinthatunk az éppen rejtett bábura, ezzel
 Problémát jelenthet továbbá, hogy amint a játékos kiválasztja, hogy melyik mezőre szeretne lépni,
 a karaktere eltűnik, és a következő játékos figurája válik láthatóvá, így a lépő játékos 
 nem kap egyértelmű visszajelzést a cselekvésének következményéről. Segíti viszont a 
-játékosokat a tájékozódásban, hogy a különböző típusú mezők különböző megfelelő színnel 
+játékosokat a tájékozódásban, hogy a különböző típusú mezők különböző színnel 
 vannak jelölve a játéktéren. A navigáció során nehézséget jelenthet, hogy az egyes mezők _hitboxai_
 nem pontosan fedik a sokszögeket, így előfordulhat, hogy a látszólag kiválasztott mező helyett
 egy másikkal interaktál a játékos.
