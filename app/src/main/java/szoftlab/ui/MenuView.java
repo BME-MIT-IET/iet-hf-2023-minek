@@ -29,7 +29,7 @@ public class MenuView extends JFrame{
         JPanel panel = new JPanel();
         JButton start = new JButton("Start");
         JButton exit = new JButton("Exit");
-        JTextField playerName = new JTextField("Player Name");
+        PlayerNameTextField playerName = new PlayerNameTextField("Player Name");
         playerName.setAlignmentX(CENTER_ALIGNMENT);
         JButton addPlayer = new JButton("Add Player");
         DefaultListModel<String> list = new DefaultListModel<String>();  
@@ -37,13 +37,17 @@ public class MenuView extends JFrame{
 
         start.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                if(list.size() > 0){
+                if (list.size() > 0) {
                     ArrayList<String> names = new ArrayList<>();
                     for(int i = 0; i < list.size(); i++){
                         names.add(list.get(i));
                     }
                     Main.view = new GameView(names);
                     dispose();
+                } else {
+                    JOptionPane.showMessageDialog(MenuView.this, "You must add players before " +
+                                    "starting a game.", "No players added",
+                            JOptionPane.INFORMATION_MESSAGE);
                 }
             }
         });
@@ -54,7 +58,20 @@ public class MenuView extends JFrame{
         });
         addPlayer.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                list.addElement(playerName.getText());
+                boolean playerCountOk = list.size() < 6;
+                boolean playerNameIsUnique = !list.contains(playerName.getText());
+                if (playerCountOk && playerNameIsUnique) { // allow a maximum of 6 players
+                    list.addElement(playerName.getText());
+                    playerName.reset();
+                    if (list.size() == 6) {
+                        addPlayer.setEnabled(false);
+                        addPlayer.removeMouseListener(this);
+                    }
+                } else if (!playerNameIsUnique) {
+                    JOptionPane.showMessageDialog(MenuView.this, "You've already " +
+                                    "added a player with the same name.", "Player name must be unique",
+                            JOptionPane.WARNING_MESSAGE);
+                }
             }
         });
         //panel.add(Box.createVerticalStrut(100));
