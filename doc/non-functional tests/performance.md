@@ -2,16 +2,15 @@
 
 JVM alapú programok memória és CPU idő használatát lehet mérni profiling programok segítségével, például a [VisualVM](https://visualvm.github.io/). 
 
-Az alábbi mérések egy ~5 perces futás eredménye.
+Az alábbi mérések egy ~5 perces futás eredményei.
 
 ## CPU idő
 
 ![cpu time](images/cpu.png)
 
-Mint látható a méréseken a cpu idő esemény vezérelt programoknál elhanyagolható mértékű, mivel a program legtöbb ideje várakozással telik.
+Mint látható a méréseken, a CPU-idő eseményvezérelt programoknál elhanyagolható mértékű, mivel a program legtöbb ideje várakozással telik.
 
-Ettől függetlenül a legtöbb időt a konzolra írás teszi ki, 
-mivel a konzolra írás egy lassú művelet, ezért érdemes a konzolra írást kikapcsolni ha nem szükséges. Ezzel ~20%-al kevesebb időt vesz igénybe a program futása.
+Ettől függetlenül a legtöbb időt a konzolra írás teszi ki, mivel a konzolra írás egy lassú művelet, ezért érdemes a konzolra írást kikapcsolni ha nem szükséges. Ezzel ~20%-kal kevesebb időt vesz igénybe a program futása.
 
 ## Memória használat
 
