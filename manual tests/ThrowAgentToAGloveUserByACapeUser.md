@@ -13,7 +13,7 @@ Felszerelések viselkedésének demonstrálása ágens kenése közben.
 - Virológus 2.: a Virológus 1-gyel megegyező mezőn áll. Van nála egy kesztyű.
 
 #### Teszt menete
-1. A Virológus 1. bal egér gombbal kattintva a mezőn előhozza a legördülő mezőt.
+1. A Virológus 1. bal egérgombbal kattintva a mezőn előhozza a legördülő mezőt.
 2. A Virológus 1. a menüpontokból kiválasztja a "Throw an agent" pontot.
 3. A Virológus 1. a "Craft" előugró menüpontok közül kiválasztja a már elkészített bénító ágenst, ezzel Virológus 2-re dobva azt.
 

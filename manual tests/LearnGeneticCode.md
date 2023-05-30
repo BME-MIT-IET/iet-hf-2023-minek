@@ -19,7 +19,7 @@ Effekt létrehozása, ágens létrehozása, genetikai kód létrehozása, labora
 1. A Virológus 1. bal kattintással kattint az általa elfoglalt laboratórium mezőre.
 2. Itt a megjelenő listából kiválasztja a "Touch this field" opciót, ezzel letapogatva a mezőt.
 3. A következő körben a Virológus 1. bal kattintással kattint az általa elfoglalt laboratórium mezőre.
-4. Itt a megjelenő listából kiválasztja a "Interact with this field" opciót.
+4. Itt a megjelenő listából kiválasztja az "Interact with this field" opciót.
 
 #### Elvárt kimenet
 

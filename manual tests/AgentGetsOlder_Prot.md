@@ -14,8 +14,8 @@ Mivel az effekteknek limitált időtartamig van hatásuk, ezeket csökkenteni ke
 
 #### Teszt menete:
 1. Eltelik 3 kör.
-2. A Virológus 2. bal egér gombbal kattintva a másik játékoson előhozza a legördülő mezőt.
-3. A Virológus 2. a menüpontokból kiválasztja a "Throw affect" pontot.
+2. A Virológus 2. bal egérgombbal kattintva a másik játékoson előhozza a legördülő mezőt.
+3. A Virológus 2. a menüpontokból kiválasztja a "Throw an agent" pontot.
 4. A Virológus 1. elfelejtette a megtanult genetikai kódokat.
 
 #### Elvárt kimenet:

@@ -18,7 +18,7 @@ Köpeny tárolása, köpeny ellopása, köpeny levétele.
 ### Teszt menete
 
 1. A Virológus 1. bal kattintással kattint Virológus 2.-re.
-2. Itt a legördülő menüből kiválasztja a „Steal” menüpontot.
+2. Itt a legördülő menüből kiválasztja a „Steal an equipment” menüpontot.
 
 #### Elvárt kimenet
 

@@ -19,4 +19,4 @@ Mivel az effekteknek limitált időtartamig van hatásuk, ezeket csökkenteni ke
 5. Itt a legördülő menüből kiválasztja a „Move here” menüpontot, ezzel rálép a szomszédos mezőre.
 
 #### Elvárt kimenet:
-- Virológus 1.: a körök végére a bénítés hatása elmúlik.
+- Virológus 1.: a körök végére a bénítás hatása elmúlik.

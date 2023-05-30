@@ -18,7 +18,7 @@ Védő ágens dobása védett virológusra.
 3. A labor mezőn a legördülő menüt előhívva kiválasztja a Virológus 1. az "Interact with this field" opciót.
 4. Ennek hatására a Virológus 1. megtanulja a felvett genetikai kódot.
 5. Virológus 1. a "Craft" menüpontra kattintva kiválasztja a "Protection" ágenst, melyel létrehozza azt.
-6. A Virológus 1. bal egér gombbal kattintva a mezőn előhozza a legördülő mezőt.
+6. A Virológus 1. bal egérgombbal kattintva a mezőn előhozza a legördülő menüt.
 7. A Virológus 1. a menüpontokból kiválasztja a "Throw an agent" pontot.
 8. A Virológus 1. a "Craft" előugró menüpontok közül kiválasztja a már elkészített numb ágenst, ezzel a másik játékosra dobja azt.
 
