@@ -6,11 +6,11 @@ A teszteléshez a [VisualVM](https://visualvm.github.io/) profiling programot ha
 
 ## Security
 
-A teszteléshez a [CodeQL](https://securitylab.github.com/tools/codeql) statikus kódelemzőt használtuk. A tesztelés során nem találtunk semmilyen sérülékenységet. Továbbá megállapítottuk, hogy a Java nyelv és a JVM biztonsági funkciói is jelentős mértékben hozzájárulnak a játék biztonságához. Természetesen az sem elhanyagolandó, hogy a játék offline, így nem áll szemben semmilyen külső támadással. Az egyetlen terület ami tényleg sebezhetőnek bizonyult, a csalás volt, ami könnyedén megnehezíthető egy kör vége után megjelenő köztes képernyővel.
+A teszteléshez a [CodeQL](https://securitylab.github.com/tools/codeql) statikus kódelemzőt használtuk. A tesztelés során nem találtunk semmilyen sérülékenységet. Továbbá megállapítottuk, hogy a Java nyelv és a JVM biztonsági funkciói is jelentős mértékben hozzájárulnak a játék biztonságához. Természetesen az sem elhanyagolandó, hogy a játék offline, így nem áll szemben semmilyen külső támadással. Az egyetlen terület, ami tényleg sebezhetőnek bizonyult a csalás volt, ami könnyedén megnehezíthető egy kör vége után megjelenő köztes képernyővel.
 
 ## Usability
 
-A dokumentumban a felhasználói felület használhatóságát vizsgáltuk, ami ergonómiai szempontból számos könnyen javítható problémát tartalmaz. A menü és maga a játékmenet egyaránt tartalmazott használhatóság szempontjából kissé meggondolatlan elemeket és layoutokat, ezekre részletes kritikát és kézenfekvő megoldási tervet is adtunk. Leginkább kritikus problémaként kiemelendő a játékmezőn való navigáció, ezen belül is a tábla mazőinek hitboxa, amely jelentősen rontotta a játkélményt.
+A dokumentumban a felhasználói felület használhatóságát vizsgáltuk, ami ergonómiai szempontból számos könnyen javítható problémát tartalmaz. A menü és maga a játékmenet egyaránt tartalmazott használhatóság szempontjából kissé meggondolatlan elemeket és layoutokat, ezekre részletes kritikát és kézenfekvő megoldási tervet is adtunk. Leginkább kritikus problémaként kiemelendő a játékmezőn való navigáció, ezen belül is a tábla mezőinek hitboxa, amely jelentősen rontotta a játékélményt.
 
 ## Portability
 
