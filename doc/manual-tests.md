@@ -5,7 +5,7 @@ is követelményként elkészített tesztek felhasználásával készítettük e
 Ezen tesztek egy, a csapat által definiált pályaleíró nyelven készültek, 
 ezzel a lehetséges összes tesztesetet tesztelték.
 
-A teszteseteket felosztottuk a teszten dolgozú csapattagok között, és a játékon kísérletezve néztük meg azt, 
+A teszteseteket felosztottuk a teszten dolgozó csapattagok között, és a játékon kísérletezve néztük meg azt, 
 hogy a működés ténylegesen megvalósul-e. A konklúzióink alapján írtuk meg
 a manuális teszteket, melyhez egy előre megbeszélt sablont definiáltunk, hogy a tesztjeink
 egységesen írják le azt, hogy mi lett a teszt végkimenetele.
