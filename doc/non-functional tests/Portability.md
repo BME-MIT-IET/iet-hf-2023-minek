@@ -14,7 +14,7 @@ Windows-on, MacOS-en és Linuxon is egyaránt.
 
 ## CPU
 
-A Java fordítóprogramok a forráskódot úgynevezett Java bájtkóra fordítja. Más nyelveknél ez egy adott CPU-nak megfelelő
+A Java fordítóprogramok a forráskódot úgynevezett Java bájtkódra fordítja. Más nyelveknél ez egy adott CPU-nak megfelelő
 kód lenne, viszont a Java bájtkód egy "nem létező" CPU-ra fordul. Ezt a kódot ezután egy Java Virtual Machine (JVM)
 lefuttatja egy java virtuális gépen. Így a különböző CPU-k szempontjából hordozható a programunk.
 
